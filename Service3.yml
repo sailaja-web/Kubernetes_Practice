@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cluster-service
+  labels:
+    author: intelliqit
+spec:
+  type: ClusterIP
+  selector:
+    author: intelliqit
+    type: db
+  ports:
+    - targetPort: 5432
+      port: 80
+...
